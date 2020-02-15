@@ -1,0 +1,136 @@
+%% Created by Maple 2019.0, Mac OS X
+%% Source Worksheet: M249Q3
+%% Generated: Sat Feb 15 18:55:38 EST 2020
+\documentclass{article}
+\usepackage{maplestd2e}
+\def\emptyline{\vspace{12pt}}
+\begin{document}
+\pagestyle{empty}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Error}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Normal}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Hyperlink}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{with(LinearAlgebra); -1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{M := `<|>`(`<,>`(0, 1, 1, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 1, 1, 1, 0, 0, 0), `<,>`(0, 1, 1, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 0, 0, 0, 0, 1, 0), `<,>`(0, 1, 0, 0, 0, 0, 0, 0, 0), `<,>`(0, 1, 0, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 1, 0, 1, 0, 0, 0), `<,>`(0, 0, 0, 0, 0, 0, 0, 0, 1), `<,>`(0, 0, 1, 0, 0, 0, 1, 0, 1)); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{M := `<|>`(`<,>`(0, 1, 1, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 1, 1, 1, 0, 0, 0), `<,>`(0, 1, 1, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 0, 0, 0, 0, 1, 0), `<,>`(0, 1, 0, 0, 0, 0, 0, 0, 0), `<,>`(0, 1, 0, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 1, 0, 1, 0, 0, 0), `<,>`(0, 0, 0, 0, 0, 0, 0, 0, 1), `<,>`(0, 0, 1, 0, 0, 0, 1, 0, 1)); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{M := `<|>`(`<,>`(0, 1, 1, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 1, 1, 1, 0, 0, 0), `<,>`(0, 1, 1, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 0, 0, 0, 0, 1, 0), `<,>`(0, 1, 0, 0, 0, 0, 0, 0, 0), `<,>`(0, 1, 0, 1, 0, 0, 0, 0, 0), `<,>`(0, 0, 0, 1, 0, 1, 0, 0, 0), `<,>`(0, 0, 0, 0, 0, 0, 0, 0, 1), `<,>`(0, 0, 1, 0, 0, 0, 1, 0, 1)); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 9, 1 .. 9, [[0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 1, 0, 1, 1, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0, 0, 1], [1, 1, 1, 0, 0, 1, 1, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1]], subtype = Matrix); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{A := LinearAlgebra:-IdentityMatrix(9)-x*M; 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{A := LinearAlgebra:-IdentityMatrix(9)-x*M; 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 9, 1 .. 9, [[1, 0, 0, 0, 0, 0, 0, 0, 0], [-x, 1, -x, 0, -x, -x, 0, 0, 0], [-x, 0, 1-x, 0, 0, 0, 0, 0, -x], [-x, -x, -x, 1, 0, -x, -x, 0, 0], [0, -x, 0, 0, 1, 0, 0, 0, 0], [0, -x, 0, 0, 0, 1, -x, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0, -x], [0, 0, 0, -x, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, -x, 1-x]], subtype = Matrix); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{Q := LinearAlgebra:-Adjoint(A); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{Q := LinearAlgebra:-Adjoint(A); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 9, 1 .. 9, [[-x^8+3*x^6-x^5-4*x^4+4*x^3-x^2-2*x+1, 0, 0, 0, 0, 0, 0, 0, 0], [-x^5-x^2+x, x^6-2*x^4+x^2-2*x+1, -x^5-x^2+x, -x^6+x^5+x^4, x^7-2*x^5+x^3-2*x^2+x, x^6-x^5+x^3-2*x^2+x, x^5+x^4-2*x^3+x^2, -x^5+x^4+x^3, -x^4+x^3+x^2], [x^8+x^7-2*x^6+3*x^4-2*x^3-x^2+x, x^5+x^4, x^7+x^6-x^5-x^4+2*x^3-2*x^2-x+1, -2*x^5+x^3, x^6+x^5, -x^6+x^5+x^4, -x^7-x^6+x^5+x^4, -2*x^4+x^2, -2*x^3+x], [x^4-2*x^3+x, x^4-x^3-x^2+x, x^4-2*x^3+x, -2*x^4+4*x^3-x^2-2*x+1, x^5-x^4-x^3+x^2, -x^5+3*x^4-2*x^3-x^2+x, -x^6+x^5+2*x^4-2*x^3-x^2+x, x^7-3*x^5+x^4+2*x^3, x^6-3*x^4+x^3+2*x^2], [-x^6-x^3+x^2, x^7-2*x^5+x^3-2*x^2+x, -x^6-x^3+x^2, -x^7+x^6+x^5, x^6-x^5-3*x^4+2*x^3-2*x+1, x^7-x^6+x^4-2*x^3+x^2, x^6+x^5-2*x^4+x^3, -x^6+x^5+x^4, -x^5+x^4+x^3], [-x^7+x^5-x^3+x^2, -x^5+x^3-2*x^2+x, -x^7+x^5-x^3+x^2, x^7-x^6+x^4, -x^6+x^4-2*x^3+x^2, -x^7+2*x^6-3*x^4+2*x^3-2*x+1, x^7-2*x^5+2*x^4-2*x^2+x, x^6-x^5+x^3, x^5-x^4+x^2], [-x^6+x^5+x^4, -x^6+x^4, -x^6+x^5+x^4, 2*x^6-2*x^5-x^4+x^3, -x^7+x^5, x^7-2*x^6+x^4, x^6-x^5-3*x^4+4*x^3-x^2-2*x+1, 2*x^5-2*x^4-x^3+x^2, 2*x^4-2*x^3-x^2+x], [x^5-2*x^4+x^2, x^5-x^4-x^3+x^2, x^5-2*x^4+x^2, -2*x^5+4*x^4-x^3-2*x^2+x, x^6-x^5-x^4+x^3, -x^6+3*x^5-2*x^4-x^3+x^2, -x^7+x^6+2*x^5-2*x^4-x^3+x^2, -2*x^4+4*x^3-x^2-2*x+1, x^7-3*x^5+x^4+2*x^3], [-x^5+x^4+x^3, -x^5+x^3, -x^5+x^4+x^3, 2*x^5-2*x^4-x^3+x^2, -x^6+x^4, x^6-2*x^5+x^3, x^7-2*x^5+x^3, 2*x^4-2*x^3-x^2+x, 2*x^3-2*x^2-x+1]], subtype = Matrix); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{denompoly := LinearAlgebra:-Determinant(A); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{denompoly := LinearAlgebra:-Determinant(A); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{denompoly := -x^8+3*x^6-x^5-4*x^4+4*x^3-x^2-2*x+1; "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{starting := `<,>`(1, 0, 0, 0, 0, 0, 0, 0, 0); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{starting := `<,>`(1, 0, 0, 0, 0, 0, 0, 0, 0); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 9, [1, 0, 0, 0, 0, 0, 0, 0, 0], subtype = Vector[column]); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{ending := `<|>`(1, 1, 1, 0, 0, 1, 1, 0, 1); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{ending := `<|>`(1, 1, 1, 0, 0, 1, 1, 0, 1); 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 9, [1, 1, 1, 0, 0, 1, 1, 0, 1], subtype = Vector[row]); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{G := evalm(Typesetting:-delayDotProduct(Typesetting:-delayDotProduct(ending, Q), starting))/denompoly; 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{G := evalm(Typesetting:-delayDotProduct(Typesetting:-delayDotProduct(ending, Q), starting))/denompoly; 1}{\[\displaystyle \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{G := (-x^5+x^4+2*x^3-2*x^2+1)/(-x^8+3*x^6-x^5-4*x^4+4*x^3-x^2-2*x+1); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\end{document}
