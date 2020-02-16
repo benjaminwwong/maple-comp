@@ -1,0 +1,90 @@
+%% Created by Maple 2019.0, Mac OS X
+%% Source Worksheet: M249Q1Work
+%% Generated: Sat Feb 15 19:39:39 EST 2020
+\documentclass{article}
+\usepackage{maplestd2e}
+\def\emptyline{\vspace{12pt}}
+\begin{document}
+\pagestyle{empty}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Error}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Normal}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Hyperlink}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{with(LinearAlgebra); -1}{\[\]}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{T := `<|>`(`<,>`(t^4+t^2, t^2, 2*t^3, 0), `<,>`(t, 0, 0, t^2), `<,>`(2*t, 0, t^2, 0), `<,>`(0, t^2, 0, 0)); 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 4, 1 .. 4, [[t^4+t^2, t, 2*t, 0], [t^2, 0, 0, t^2], [2*t^3, 0, t^2, 0], [0, t^2, 0, 0]], subtype = Matrix); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{A := LinearAlgebra:-IdentityMatrix(4)-T; 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 4, 1 .. 4, [[-t^4-t^2+1, -t, -2*t, 0], [-t^2, 1, 0, -t^2], [-2*t^3, 0, -t^2+1, 0], [0, -t^2, 0, 1]], subtype = Matrix); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{Q := LinearAlgebra:-Adjoint(A); -1}{\[\]}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{denompoly := LinearAlgebra:-Adjoint(A); -1}{\[\]}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{starting := `<,>`(1, 0, 0, 0); 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 4, [1, 0, 0, 0], subtype = Vector[column]); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{ending := `<|>`(1, 0, 0, 0); 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 4, [1, 0, 0, 0], subtype = Vector[row]); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{G := evalm(Typesetting:-delayDotProduct(Typesetting:-delayDotProduct(ending, Q), starting))/denompoly; 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rtable(1 .. 4, 1 .. 4, [[(t^6-t^4-t^2+1)*(t^4+t^2-1)/((t^2-1)*(t^8-3*t^6-6*t^4-t^3-t^2+1)), (t^6-t^4-t^2+1)*t/((t^2-1)*(t^8-3*t^6-6*t^4-t^3-t^2+1)), (2*t^6-2*t^4-2*t^2+2)*t/((t^2-1)*(t^8-3*t^6-6*t^4-t^3-t^2+1)), 0], [(t^6-t^4-t^2+1)*t^2/((t^2-1)*(t^8-3*t^6-6*t^4-t^3-t^2+1)), -(t^6-t^4-t^2+1)/((t^2-1)*(t^8-3*t^6-6*t^4-t^3-t^2+1)), 0, (t^6-t^4-t^2+1)*t^2/(t^10-4*t^8-3*t^6-t^5+5*t^4+t^3+2*t^2-1)], [(2*t^6-2*t^4-2*t^2+2)*t^3/((t^2-1)*(t^8-3*t^6-6*t^4-t^3-t^2+1)), 0, (t^6-t^4-t^2+1)/(t^8-3*t^6-6*t^4-t^3-t^2+1), 0], [0, (t^6-t^4-t^2+1)*t^2/(t^10-4*t^8-3*t^6-t^5+5*t^4+t^3+2*t^2-1), 0, -(t^6-t^4-t^2+1)/(t^10-4*t^8-3*t^6-t^5+5*t^4+t^3+2*t^2-1)]], subtype = Matrix); "_noterminate"}{\[\displaystyle \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{}{\[\]}
+\end{mapleinput}
+\end{maplegroup}
+\end{document}
